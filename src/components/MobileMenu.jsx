@@ -1,4 +1,4 @@
-import React, {useState}from "react"
+import React, { useState } from "react"
 import { CgClose, CgMenuRight } from "react-icons/cg"
 import { navLinks } from "../constants"
 import { NavLink } from "react-router-dom"
@@ -19,7 +19,7 @@ const MobileMenu = () => {
       <div
         className={`${
           toggle ? `flex` : `hidden`
-        } absolute left-0 right-0 top-20 mx-6 my-2 min-w-[120px] max-w-xl justify-center rounded-xl bg-black/50 p-6`}
+        } absolute left-0 right-0 top-16 mx-6 my-2 min-w-[120px] max-w-xl justify-center rounded-xl bg-black p-6`}
       >
         <ul className="flex flex-col items-center ">
           {navLinks.map((navLink, index) => {
