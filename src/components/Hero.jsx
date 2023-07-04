@@ -1,8 +1,39 @@
-import React from 'react'
+import React from "react"
+import { Button, GlobalStats } from "./"
+import { coins, ethereumcoin } from "../assets"
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <section className="container mx-auto">
+      <div className=" mt-4 md:mt-14 lg:mt-24 2xl:mt-40">
+        <h1 className="mb-8 text-center text-4xl font-semibold text-[#d242fd] md:mb-16 lg:mb-20 lg:text-5xl 2xl:mb-32 2xl:text-8xl">
+          Worldwide Cryptocurrency Stats
+        </h1>
+        <div className="2xl: grid grid-cols-2 gap-4 py-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          <GlobalStats />
+        </div>
+      </div>
+      <div className="relative mt-6 flex flex-row items-center justify-center lg:mt-32 2xl:mt-40">
+        <img
+          className=" absolute right-32 hidden h-[108px] w-[108px] animate-bounce lg:flex xl:right-24 2xl:right-6"
+          src={ethereumcoin}
+          alt=""
+        />
+        <h1 className="text-center text-3xl font-semibold text-[#f3f2f4] lg:text-4xl 2xl:text-6xl">
+          Check and Trade <br className="hidden lg:flex xl:hidden" />
+          your favorite coins
+        </h1>
+        <img
+          className="absolute left-32 hidden h-[108px] w-[108px] animate-bounce  lg:flex xl:left-24 2xl:left-6"
+          src={coins}
+          alt=""
+        />
+      </div>
+        {/* TODO Top 5 coins */}
+      <div className="flex justify-center my-8 md:my-16 lg:my-24 xl:my-32">
+        <Button name="Details" />
+      </div>
+    </section>
   )
 }
 
