@@ -10,7 +10,11 @@ const Hero = () => {
           Worldwide Cryptocurrency Stats
         </h1>
         <div className="2xl: grid grid-cols-2 gap-4 py-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-          <GlobalStats />
+          <GlobalStats title="Total Coins" value={5} />
+          <GlobalStats title="Market Cap" value={5} />
+          <GlobalStats title="Markets" value={5} />
+          <GlobalStats title="Exchanges" value={5} />
+          <GlobalStats title="24h Volume" value={5} />
         </div>
       </div>
       <div className="relative mt-6 flex flex-row items-center justify-center lg:mt-32 2xl:mt-40">
@@ -29,9 +33,9 @@ const Hero = () => {
           alt=""
         />
       </div>
-        {/* TODO Top 5 coins */}
-      <div className="flex justify-center my-8 md:my-16 lg:my-24 xl:my-32">
-        <Button name="Details" />
+      {/* TODO Top 5 coins */}
+      <div className="my-8 flex justify-center md:my-16 lg:my-24 xl:my-32">
+        <Button name="More Coins" />
       </div>
     </section>
   )
