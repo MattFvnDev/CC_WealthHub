@@ -1,8 +1,15 @@
 import React from "react"
 import { Button, GlobalStats } from "./"
 import { coins, ethereumcoin } from "../assets"
+import { useGetCoinsQuery } from "../services/coinsApi"
+import millify from "millify"
 
 const Hero = () => {
+  const { data, isFetching } = useGetCoinsQuery()
+  const worldwideData = data?.data?.stats
+  // console.log(data)
+  if (isFetching) return "Loading"
+
   return (
     <section className="container mx-auto">
       <div className=" mt-4 md:mt-14 lg:mt-24 2xl:mt-40">
@@ -10,11 +17,23 @@ const Hero = () => {
           Worldwide Cryptocurrency Stats
         </h1>
         <div className="2xl: grid grid-cols-2 gap-4 py-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-          <GlobalStats title="Total Coins" value={5} />
-          <GlobalStats title="Market Cap" value={5} />
-          <GlobalStats title="Markets" value={5} />
-          <GlobalStats title="Exchanges" value={5} />
-          <GlobalStats title="24h Volume" value={5} />
+          <GlobalStats title="Total Coins" value={worldwideData.totalCoins} />
+          <GlobalStats
+            title="Market Cap"
+            value={millify(worldwideData.totalMarketCap)}
+          />
+          <GlobalStats
+            title="Markets"
+            value={millify(worldwideData.totalMarkets)}
+          />
+          <GlobalStats
+            title="Exchanges"
+            value={millify(worldwideData.totalExchanges)}
+          />
+          <GlobalStats
+            title="24h Volume"
+            value={millify(worldwideData.total24hVolume)}
+          />
         </div>
       </div>
       <div className="relative mt-6 flex flex-row items-center justify-center lg:mt-32 2xl:mt-40">
