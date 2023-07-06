@@ -6,7 +6,7 @@ import millify from "millify"
 import Cryptocurrencies from "../pages/Cryptocurrencies"
 
 const Hero = () => {
-  const { data, isFetching } = useGetCoinsQuery(5)
+  const { data, isFetching } = useGetCoinsQuery(4)
   const worldwideData = data?.data?.stats
 
   if (isFetching) return "Loading..."
@@ -53,7 +53,7 @@ const Hero = () => {
           alt=""
         />
       </div>
-      <h2 className="mt-8 text-center text-3xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-24 2xl:text-6xl">
+      <h2 className="mt-8 mb-4 text-center text-3xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-24 2xl:text-6xl 2xl:mb-12">
         The World's Leading Coins
       </h2>
       <Cryptocurrencies few={true} />
