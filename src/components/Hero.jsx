@@ -3,12 +3,13 @@ import { Button, GlobalStats } from "./"
 import { coins, ethereumcoin } from "../assets"
 import { useGetCoinsQuery } from "../services/coinsApi"
 import millify from "millify"
+import Cryptocurrencies from "../pages/Cryptocurrencies"
 
 const Hero = () => {
-  const { data, isFetching } = useGetCoinsQuery()
+  const { data, isFetching } = useGetCoinsQuery(5)
   const worldwideData = data?.data?.stats
-  // console.log(data)
-  if (isFetching) return "Loading"
+
+  if (isFetching) return "Loading..."
 
   return (
     <section className="container mx-auto">
@@ -16,7 +17,7 @@ const Hero = () => {
         <h1 className="mb-8 text-center text-4xl font-semibold text-[#d242fd] md:mb-16 lg:mb-20 lg:text-5xl 2xl:mb-32 2xl:text-8xl">
           Worldwide Cryptocurrency Stats
         </h1>
-        <div className="2xl: grid grid-cols-2 gap-4 py-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-4 py-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           <GlobalStats title="Total Coins" value={worldwideData.totalCoins} />
           <GlobalStats
             title="Market Cap"
@@ -52,8 +53,11 @@ const Hero = () => {
           alt=""
         />
       </div>
-      {/* TODO Top 5 coins */}
-      <div className="my-8 flex justify-center md:my-16 lg:my-24 xl:my-32">
+      <h2 className="mt-8 text-center text-3xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-24 2xl:text-6xl">
+        The World's Leading Coins
+      </h2>
+      <Cryptocurrencies few={true} />
+      <div className="my-8 flex justify-center md:my-16 lg:my-20 xl:my-24">
         <Button name="More Coins" />
       </div>
     </section>

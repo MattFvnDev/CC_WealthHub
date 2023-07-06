@@ -1,9 +1,58 @@
-import React from 'react'
+import React, { useState } from "react"
+import millify from "millify"
+import { Link } from "react-router-dom"
+import { useGetCoinsQuery } from "../services/coinsApi"
 
-const Cryptocurrencies = () => {
+const Cryptocurrencies = ({ few }) => {
+  const count = few ? 4 : 50
+  const { data: coinsList, isFetching } = useGetCoinsQuery(count)
+  const [coins, setCoins] = useState(coinsList?.data?.coins)
+
+  if (isFetching) return "Loading..."
+
   return (
-    <div>Cryptocurrencies</div>
+    <section className="container mx-auto px-6 py-6 text-white lg:py-8">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 2xl:grid-cols-4 2xl:gap-14">
+        {coins?.map((coin) => (
+          <div
+            className="flex flex-col"
+            key={coin.uuid}
+            title={`${coin.rank}.${coin.name}`}
+          >
+            <Link to={`/cryptocurrencies/${coin.uuid}`}>
+              <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6 transition delay-75 duration-200 ease-in-out hover:scale-105 hover:bg-indigo-500 xl:hover:scale-110">
+                <div className="flex flex-row items-center justify-between border-b-2 pb-4">
+                  <h4 className="text-xl font-semibold">{`${coin.rank}. ${coin.name}`}</h4>
+                  <img
+                    className="h-[32px] w-[32px] xl:h-[40px] xl:w-[40px]"
+                    src={coin.iconUrl}
+                    alt={coin.id}
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <p
+                    className={`${"text-lg font-bold"} 
+                    ${
+                      coin.change >= 0
+                        ? `${"text-[#00ff00]"}`
+                        : `${"text-[#ff0000]"}`
+                    }`}
+                  >
+                    Daily Change: {millify(coin.change)}%
+                  </p>
+                  <p className="text-base font-bold">
+                    Price: ${millify(coin.price)}
+                  </p>
+                  <p className="text-base font-bold">
+                    Market Cap: {millify(coin.marketCap)}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </section>
   )
 }
-
 export default Cryptocurrencies

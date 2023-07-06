@@ -14,7 +14,7 @@ const Header = () => {
             return (
               <li
                 key={navLink.id}
-                className={`cursor-pointer text-[20px] font-bold text-white hover:text-[#d242fd] xl:text-[24px]
+                className={`text-[20px] font-bold text-white hover:text-[#d242fd] xl:text-[24px]
         
                 ${index === navLinks.length - 1 ? `mr-0` : `mr-10`}`}
               >
