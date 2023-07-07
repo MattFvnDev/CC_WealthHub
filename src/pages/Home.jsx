@@ -3,7 +3,7 @@ import { ChooseUs, Hero, JoinUs } from "../components"
 
 const Home = () => {
   return (
-    <div className="container mx-auto py-8 px-6 text-white">
+    <div className="container mx-auto py-4 px-4 text-white">
       <Hero />
       <ChooseUs />
       <JoinUs />

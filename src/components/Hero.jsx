@@ -3,7 +3,7 @@ import { Button, GlobalStats } from "./"
 import { coins, ethereumcoin } from "../assets"
 import { useGetCoinsQuery } from "../services/coinsApi"
 import millify from "millify"
-import Cryptocurrencies from "../pages/Cryptocurrencies"
+import { Cryptocurrencies } from "../pages"
 
 const Hero = () => {
   const { data, isFetching } = useGetCoinsQuery(4)
@@ -53,10 +53,10 @@ const Hero = () => {
           alt=""
         />
       </div>
-      <h2 className="mt-8 mb-4 text-center text-3xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-24 2xl:text-6xl 2xl:mb-12">
+      <h2 className="mb-4 mt-8 text-center text-3xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-24 2xl:mb-12 2xl:text-6xl">
         The World's Leading Coins
       </h2>
-      <Cryptocurrencies few={true} />
+      <Cryptocurrencies leading={true} />
       <div className="my-8 flex justify-center md:my-16 lg:my-20 xl:my-24">
         <Button name="More Coins" />
       </div>
