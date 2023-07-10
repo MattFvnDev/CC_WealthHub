@@ -24,7 +24,7 @@ const Cryptocurrencies = ({ leading }) => {
       {!leading && (
         <div className="mb-8 mt-4 flex flex-col xl:mt-8 2xl:mb-12">
           <input
-            className="text min-w-[250px] appearance-none self-center rounded-lg border-2 border-gray-500 px-3 py-2 leading-tight focus:border-yellow-500 focus:bg-white focus:outline-none"
+            className="text min-w-[270px] appearance-none self-center rounded-lg border-2 border-gray-500 px-3 py-2 leading-tight focus:border-yellow-500 focus:bg-white focus:outline-none"
             placeholder="Search Coins"
             onChange={(e) => setSearch(e.target.value.toLowerCase())}
           />

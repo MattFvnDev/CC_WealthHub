@@ -8,7 +8,7 @@ import { Cryptocurrencies } from "../pages"
 const Hero = () => {
   const { data, isFetching } = useGetCoinsQuery(4)
   const worldwideData = data?.data?.stats
-
+  console.log(worldwideData)
   if (isFetching) return "Loading..."
 
   return (

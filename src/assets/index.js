@@ -1,7 +1,7 @@
 import logo from "./logo/logo.svg"
 import coins from "./coins/coins.svg"
 import coinsync from "./coins/coinsync.svg"
-import cryptocions from "./coins/cryptocoins.svg"
+import cryptocoins from "./coins/cryptocoins.svg"
 import ethereumcoin from "./coins/ethereumcoin.svg"
 import money from "./money/money.svg"
 import moneybag from "./money/moneybag.svg"
@@ -14,7 +14,7 @@ export {
   logo,
   coins,
   coinsync,
-  cryptocions,
+  cryptocoins,
   ethereumcoin,
   money,
   moneybag,
