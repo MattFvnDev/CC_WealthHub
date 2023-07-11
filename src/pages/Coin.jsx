@@ -86,7 +86,7 @@ const Coin = () => {
   return (
     <section className="container mx-auto p-6">
       <div className="space-y-12 py-4 text-center lg:space-y-16 xl:space-y-24">
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-8">
           <h1 className="text-2xl font-semibold text-[#d242fd]">
             {coinDetails.name} ({coinDetails.symbol}) Price
           </h1>
@@ -98,6 +98,14 @@ const Coin = () => {
         <div className="grid grid-cols-1 space-y-10 sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-2 lg:gap-16 xl:grid-cols-4 xl:gap-8">
           <div className="flex flex-col space-y-6 border-b-2 pb-4 lg:border-b-0 lg:pb-0 xl:border-r-2 xl:pr-8 2xl:pr-12">
             <h2 className="text-2xl font-semibold text-[#00ff00]">
+              Whats's {coinDetails.name}
+            </h2>
+            <p className="text-lg font-medium text-white">
+              {coinDetails.description}
+            </p>
+          </div>
+          <div className="flex flex-col space-y-6 border-b-2 pb-4 lg:border-b-0 lg:pb-0 xl:border-r-2 xl:pr-8 2xl:pr-12">
+            <h2 className="text-2xl font-semibold text-[#d242fd]">
               {coinDetails.name} Statistics
             </h2>
             <p className="text-lg font-medium text-white">
@@ -135,14 +143,6 @@ const Coin = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-col space-y-6 border-b-2 pb-4 lg:border-b-0 lg:pb-0 xl:border-r-2 xl:pr-8 2xl:pr-12">
-            <h2 className="text-2xl font-semibold text-[#d242fd]">
-              Whats's {coinDetails.name}
-            </h2>
-            <p className="text-lg font-medium text-white">
-              {coinDetails.description}
-            </p>
-          </div>
           <div className="flex flex-col space-y-6 border-b-2 pb-4 text-center lg:border-b-0 lg:pb-0 2xl:pr-12">
             <h2 className="text-2xl font-semibold text-[#d242fd]">
               {coinDetails.name} Useful Links
@@ -152,7 +152,7 @@ const Coin = () => {
                 className="flex flex-col space-y-2 text-start sm:text-center"
                 key={link.name}
               >
-                <h2 className="text-xl font-semibold text-white">
+                <h2 className="text-2xl font-semibold text-white">
                   {link.type}
                 </h2>
                 <a
