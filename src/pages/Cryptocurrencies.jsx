@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { useGetCoinsQuery } from "../services/coinsApi"
 
 const Cryptocurrencies = ({ leading }) => {
-  const count = leading ? 4 : 50
+  const count = leading ? 4 : 100
   const { data: coinsList, isFetching } = useGetCoinsQuery(count)
   const [coins, setCoins] = useState(coinsList?.data?.coins)
   const [search, setSearch] = useState("")
@@ -25,7 +25,7 @@ const Cryptocurrencies = ({ leading }) => {
         <div className="mb-8 mt-4 flex flex-col xl:mt-8 2xl:mb-12">
           <input
             className="text min-w-[270px] appearance-none self-center rounded-lg border-2 border-gray-500 px-3 py-2 leading-tight focus:border-yellow-500 focus:bg-white focus:outline-none"
-            placeholder="Search Coins"
+            placeholder="Search Coin"
             onChange={(e) => setSearch(e.target.value.toLowerCase())}
           />
         </div>

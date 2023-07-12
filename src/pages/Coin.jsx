@@ -14,7 +14,7 @@ const Coin = () => {
   const { coinId } = useParams()
   const { data, isFetching } = useGetCoinDetailsQuery(coinId)
   const coinDetails = data?.data?.coin
-  console.log(data)
+  // console.log(data)
   if (isFetching) return "Loading..."
 
   const detailStats = [
@@ -95,8 +95,8 @@ const Coin = () => {
             latest coin stats and compare them with global ones.
           </p>
         </div>
-        <div className="grid grid-cols-1 space-y-10 sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-2 lg:gap-16 xl:grid-cols-4 xl:gap-8">
-          <div className="flex flex-col space-y-6 border-b-2 pb-4 lg:border-b-0 lg:pb-0 xl:border-r-2 xl:pr-8 2xl:pr-12">
+        <div className="grid grid-cols-1 space-y-10 sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-2 lg:gap-16 xl:grid-cols-4 xl:gap-7">
+          <div className="flex flex-col space-y-6 border-b-2 pb-4 lg:border-b-0 lg:pb-0 xl:border-r-2 xl:pr-6 2xl:pr-12">
             <h2 className="text-2xl font-semibold text-[#00ff00]">
               Whats's {coinDetails.name}
             </h2>
@@ -104,7 +104,7 @@ const Coin = () => {
               {coinDetails.description}
             </p>
           </div>
-          <div className="flex flex-col space-y-6 border-b-2 pb-4 lg:border-b-0 lg:pb-0 xl:border-r-2 xl:pr-8 2xl:pr-12">
+          <div className="flex flex-col space-y-6 border-b-2 pb-4 lg:border-b-0 lg:pb-0 xl:border-r-2 xl:pr-6 2xl:pr-12">
             <h2 className="text-2xl font-semibold text-[#d242fd]">
               {coinDetails.name} Statistics
             </h2>
@@ -124,7 +124,7 @@ const Coin = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-col space-y-6 border-b-2 pb-4 lg:border-b-0 lg:pb-0 xl:border-r-2 xl:pr-8 2xl:pr-12">
+          <div className="flex flex-col space-y-6 border-b-2 pb-4 lg:border-b-0 lg:pb-0 xl:border-r-2 xl:pr-6 2xl:pr-12">
             <h2 className="text-2xl font-semibold text-[#00ff00]">
               Global Statistics
             </h2>

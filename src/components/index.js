@@ -8,7 +8,7 @@ import ChooseUs from "./ChooseUs"
 import MobileMenu from "./MobileMenu"
 import GlobalStats from "./GlobalStats"
 import Button from "./Button"
-
+import NewsButton from "./NewsButton"
 
 export {
   Header,
@@ -21,4 +21,5 @@ export {
   MobileMenu,
   GlobalStats,
   Button,
+  NewsButton,
 }

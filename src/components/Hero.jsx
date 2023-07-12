@@ -1,14 +1,14 @@
 import React from "react"
-import { Button, GlobalStats } from "./"
+import { Button, GlobalStats, NewsButton } from "./"
 import { coins, ethereumcoin } from "../assets"
 import { useGetCoinsQuery } from "../services/coinsApi"
 import millify from "millify"
-import { Cryptocurrencies } from "../pages"
+import { Cryptocurrencies, News } from "../pages"
 
 const Hero = () => {
   const { data, isFetching } = useGetCoinsQuery(4)
   const worldwideData = data?.data?.stats
-  console.log(worldwideData)
+  // console.log(worldwideData)
   if (isFetching) return "Loading..."
 
   return (
@@ -56,9 +56,16 @@ const Hero = () => {
       <h2 className="mb-4 mt-8 text-center text-3xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-24 2xl:mb-12 2xl:text-6xl">
         The World's Leading Coins
       </h2>
-      <Cryptocurrencies leading={true} />
+      <Cryptocurrencies leading />
       <div className="my-8 flex justify-center md:my-16 lg:my-20 xl:my-24">
         <Button name="More Coins" />
+      </div>
+      <h2 className="mb-4 mt-8 text-center text-3xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-24 2xl:mb-12 2xl:text-6xl">
+        Latest Cryptocurrency News
+      </h2>
+      <News leading />
+      <div className="my-8 flex justify-center md:my-16 lg:my-20 xl:my-24">
+        <NewsButton name="More News" />
       </div>
     </section>
   )
