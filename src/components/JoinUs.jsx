@@ -24,7 +24,7 @@ const JoinUs = () => {
         />
       </div>
       <p className="mt-4 text-center text-xl lg:text-2xl 2xl:text-4xl">
-        Grow your wealth and manage it together with us in one place.
+        Grow your wealth and manage it together with us in one platform.
       </p>
       <div className="my-8 flex justify-center md:my-16 lg:my-20 xl:my-24">
         <a

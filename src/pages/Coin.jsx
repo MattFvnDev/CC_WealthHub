@@ -86,7 +86,7 @@ const Coin = () => {
   return (
     <section className="container mx-auto p-6">
       <div className="space-y-12 py-4 text-center lg:space-y-16 xl:space-y-24">
-        <div className="flex flex-col space-y-8">
+        <div className="flex flex-col space-y-8 lg:mt-12">
           <h1 className="text-2xl font-semibold text-[#d242fd]">
             {coinDetails.name} ({coinDetails.symbol}) Price
           </h1>

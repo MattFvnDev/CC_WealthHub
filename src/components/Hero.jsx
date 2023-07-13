@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section className="container mx-auto">
       <div className=" mt-4 px-6 md:mt-14 lg:mt-24 2xl:mt-40">
-        <h1 className="mb-8 text-center text-4xl font-semibold text-[#d242fd] md:mb-16 lg:mb-20 lg:text-6xl 2xl:mb-32 2xl:text-7xl">
+        <h1 className="mb-8 text-center text-3xl font-semibold text-[#d242fd] md:mb-16 lg:mb-20 lg:text-6xl 2xl:mb-32 2xl:text-7xl">
           Worldwide Cryptocurrency Stats
         </h1>
         <div className="grid grid-cols-2 gap-4 py-4 md:grid-cols-4">
@@ -53,18 +53,18 @@ const Hero = () => {
           alt=""
         />
       </div>
-      <h2 className="mb-4 mt-8 px-6 text-center text-2xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-32 2xl:mb-12 2xl:text-6xl">
+      <h2 className="mb-4 mt-14 px-6 text-center text-2xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-32 2xl:mb-12 2xl:text-6xl">
         The World's Leading Coins
       </h2>
       <Cryptocurrencies leading />
-      <div className="my-8 flex justify-center md:my-16 lg:my-20">
+      <div className="my-4 flex justify-center md:my-12">
         <Button name="More Coins" />
       </div>
-      <h2 className="mb-4 mt-8 px-6 text-center text-2xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-32 2xl:mb-12 2xl:text-6xl">
+      <h2 className="mb-4 mt-14 px-6 text-center text-2xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-32 2xl:mb-12 2xl:text-6xl">
         Latest Cryptocurrency News
       </h2>
       <News leading />
-      <div className="my-8 flex justify-center md:my-16 lg:my-20 ">
+      <div className="my-4 flex justify-center md:my-12 ">
         <NewsButton name="More News" />
       </div>
     </section>

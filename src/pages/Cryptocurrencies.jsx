@@ -38,9 +38,9 @@ const Cryptocurrencies = ({ leading }) => {
             title={`${coin.rank}.${coin.name}`}
           >
             <Link to={`/cryptocurrencies/${coin.uuid}`}>
-              <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6 transition delay-75 duration-200 ease-in-out hover:scale-105 hover:bg-indigo-500 xl:hover:scale-110">
+              <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6 transition delay-75 duration-200 ease-in-out hover:-translate-y-4 hover:bg-indigo-500 xl:hover:scale-105">
                 <div className="flex flex-row items-center justify-between border-b-2 pb-4">
-                  <h4 className="text-xl font-semibold 2xl:text-2xl">{`${coin.rank}. ${coin.name}`}</h4>
+                  <h4 className="text-xl font-semibold sm:text-2xl">{`${coin.rank}. ${coin.name}`}</h4>
                   <img
                     className="h-[32px] w-[32px] xl:h-[40px] xl:w-[40px]"
                     src={coin.iconUrl}
@@ -49,7 +49,7 @@ const Cryptocurrencies = ({ leading }) => {
                 </div>
                 <div className="flex flex-col gap-2 2xl:space-y-2">
                   <p
-                    className={`${"text-lg font-bold 2xl:text-xl"} 
+                    className={`${"text-xl font-bold"} 
                     ${
                       coin.change >= 0
                         ? `${"text-[#00ff00]"}`
@@ -58,10 +58,10 @@ const Cryptocurrencies = ({ leading }) => {
                   >
                     Daily Change: {millify(coin.change)}%
                   </p>
-                  <p className="text-base font-bold 2xl:text-xl">
+                  <p className="text-xl font-bold">
                     Price: ${millify(coin.price)}
                   </p>
-                  <p className="text-base font-bold 2xl:text-xl">
+                  <p className="text-xl font-bold">
                     Market Cap: {millify(coin.marketCap)}
                   </p>
                 </div>

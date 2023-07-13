@@ -14,7 +14,7 @@ const News = ({ leading }) => {
 
   if (!coinNews?.value) return "Loading..."
   return (
-    <section className="container mx-auto px-6 py-6 lg:py-8">
+    <section className="container mx-auto px-6 py-6 lg:py-12">
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 xl:grid-cols-4 2xl:gap-14">
         {coinNews.value.map((news, index) => (
           <div
