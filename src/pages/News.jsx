@@ -1,12 +1,11 @@
 import React, { useState } from "react"
-import { useGetCoinsQuery } from "../services/coinsApi"
 import { useGetCoinsNewsQuery } from "../services/newsApi"
 
 const News = ({ leading }) => {
   const [searchCategory, setSearchCategory] = useState("Cryptocurrency")
   const { data: coinNews } = useGetCoinsNewsQuery({
     searchCategory,
-    count: leading ? 4 : 100,
+    count: leading ? 4 : 80,
   })
   const substituteImage =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJhYmDmHbWjc02HQHhJlbL9Ckgq-FjCVkREWaqf_iNGg&s"
@@ -16,7 +15,7 @@ const News = ({ leading }) => {
   if (!coinNews?.value) return "Loading..."
   return (
     <section className="container mx-auto px-6 py-6 lg:py-8">
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 2xl:grid-cols-4 2xl:gap-14">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 xl:grid-cols-4 2xl:gap-14">
         {coinNews.value.map((news, index) => (
           <div
             className=" flex flex-col rounded-2xl border-2 bg-[#001951] p-6 transition delay-75 duration-200 ease-in-out hover:scale-105 hover:bg-indigo-500 xl:hover:scale-110"

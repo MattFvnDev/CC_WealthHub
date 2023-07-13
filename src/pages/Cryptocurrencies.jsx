@@ -30,7 +30,7 @@ const Cryptocurrencies = ({ leading }) => {
           />
         </div>
       )}
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 2xl:grid-cols-4 2xl:gap-14">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 xl:grid-cols-4 xl:gap-12 2xl:gap-14">
         {coins?.map((coin) => (
           <div
             className="flex flex-col text-white"
@@ -40,16 +40,16 @@ const Cryptocurrencies = ({ leading }) => {
             <Link to={`/cryptocurrencies/${coin.uuid}`}>
               <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6 transition delay-75 duration-200 ease-in-out hover:scale-105 hover:bg-indigo-500 xl:hover:scale-110">
                 <div className="flex flex-row items-center justify-between border-b-2 pb-4">
-                  <h4 className="text-xl font-semibold">{`${coin.rank}. ${coin.name}`}</h4>
+                  <h4 className="text-xl font-semibold 2xl:text-2xl">{`${coin.rank}. ${coin.name}`}</h4>
                   <img
                     className="h-[32px] w-[32px] xl:h-[40px] xl:w-[40px]"
                     src={coin.iconUrl}
                     alt={coin.name}
                   />
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 2xl:space-y-2">
                   <p
-                    className={`${"text-lg font-bold"} 
+                    className={`${"text-lg font-bold 2xl:text-xl"} 
                     ${
                       coin.change >= 0
                         ? `${"text-[#00ff00]"}`
@@ -58,10 +58,10 @@ const Cryptocurrencies = ({ leading }) => {
                   >
                     Daily Change: {millify(coin.change)}%
                   </p>
-                  <p className="text-base font-bold">
+                  <p className="text-base font-bold 2xl:text-xl">
                     Price: ${millify(coin.price)}
                   </p>
-                  <p className="text-base font-bold">
+                  <p className="text-base font-bold 2xl:text-xl">
                     Market Cap: {millify(coin.marketCap)}
                   </p>
                 </div>
