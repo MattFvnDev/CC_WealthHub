@@ -8,7 +8,7 @@ const Currencies = () => {
   useEffect(() => {
     const getCurrencies = async () => {
       try {
-        const url = "http://api.nbp.pl/api/exchangerates/tables/a"
+        const url = import.meta.env.VITE_NBP_API_URL
         const response = await axios.get(url)
         setCurrenciesData(response?.data)
       } catch (error) {
