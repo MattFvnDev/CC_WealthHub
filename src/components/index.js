@@ -9,6 +9,7 @@ import MobileMenu from "./MobileMenu"
 import GlobalStats from "./GlobalStats"
 import Button from "./Button"
 import NewsButton from "./NewsButton"
+import CurrencyCard from "./CurrencyCard"
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   GlobalStats,
   Button,
   NewsButton,
+  CurrencyCard
 }
