@@ -1,6 +1,7 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { Button, GlobalStats, NewsButton } from "./"
-import { coins, ethereumcoin } from "../assets"
+import { coins, ethereumcoin, hero} from "../assets"
 import { useGetCoinsQuery } from "../services/coinsApi"
 import millify from "millify"
 import { Cryptocurrencies, News } from "../pages"
@@ -13,7 +14,30 @@ const Hero = () => {
 
   return (
     <section className="container mx-auto">
-      <div className=" mt-4 px-6 md:mt-14 lg:mt-24 2xl:mt-40">
+      <div className="grid grid-cols-1 px-6 py-6 md:grid-cols-2 md:gap-8 lg:mt-32 lg:gap-16 xl:gap-24 2xl:gap-40">
+        <div className="flex max-w-[600px] flex-col justify-center text-center md:items-start md:text-start lg:pl-16 xl:pl-28 2xl:pl-36">
+          <h1 className="text-4xl font-semibold xl:mb-4 xl:text-6xl 2xl:mb-8">
+            Let's build wealth together
+          </h1>
+          <p className="my-4 text-base font-normal text-[#00ff00] lg:text-lg xl:text-xl">
+            WealthHub is the most convenient platform to trade cryptocurrency
+            and exchange currencies. Sign up now and build your cryptocurrency
+            portfolio today.
+          </p>
+          <div className="my-4 justify-center md:my-8">
+            <button
+              type="button"
+              className="rounded-xl bg-[#d242fd] px-10 py-3 text-lg font-semibold hover:bg-[#870dac] lg:px-12 lg:py-4 2xl:mt-10"
+            >
+              <Link to="currencies">Get Started</Link>
+            </button>
+          </div>
+        </div>
+        <div className="flex flex-col items-center">
+          <img className="object-contain lg:pl-6 xl:pl-16 2xl:pl-28" src={hero} alt="" />
+        </div>
+      </div>
+      <div className="mt-4 px-6 md:mt-14 lg:mt-24 2xl:mt-40">
         <h1 className="mb-8 text-center text-3xl font-semibold text-[#d242fd] md:mb-16 lg:mb-20 lg:text-6xl 2xl:mb-32 2xl:text-7xl">
           Worldwide Cryptocurrency Stats
         </h1>

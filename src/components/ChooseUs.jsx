@@ -16,8 +16,8 @@ const ChooseUs = () => (
       Why Customers <br/>
       Choose Us
     </h2>
-    <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1">
+    <div className="grid grid-cols-1 gap-10 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-1">
         <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6">
           <img
             className="h-[64px] w-[64px] rounded-full bg-white md:h-[128px] md:w-[128px]"
@@ -73,7 +73,7 @@ const ChooseUs = () => (
         />
       </div>
       <div className="grid grid-cols-1 gap-10">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-1">
           <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6">
             <img
               className="h-[64px] w-[64px] rounded-full bg-white md:h-[128px] md:w-[128px]"

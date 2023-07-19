@@ -15,6 +15,7 @@ import portfolio from "./choose/portfolio.webp"
 import catalog from "./choose/catalog.webp"
 import technology from "./choose/technology.webp"
 import wealth from "./choose/wealth.webp"
+import hero from "./hero/hero.webp"
 
 export {
   logo,
@@ -33,5 +34,6 @@ export {
   portfolio,
   technology,
   catalog,
-  wealth
+  wealth,
+  hero
 }
