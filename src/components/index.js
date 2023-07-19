@@ -11,6 +11,7 @@ import Button from "./Button"
 import NewsButton from "./NewsButton"
 import CurrencyCard from "./CurrencyCard"
 
+
 export {
   Header,
   Footer,
@@ -23,5 +24,5 @@ export {
   GlobalStats,
   Button,
   NewsButton,
-  CurrencyCard
+  CurrencyCard,
 }

@@ -8,6 +8,13 @@ import moneybp from "./money/moneybp.svg"
 import wallet from "./wallet/wallet.svg"
 import walletbtc from "./wallet/walletbtc.svg"
 import walletcard from "./wallet/walletcard.svg"
+import phone from "./choose/phone.webp"
+import transaction from "./choose/transaction.webp"
+import rich from "./choose/rich.webp"
+import portfolio from "./choose/portfolio.webp"
+import catalog from "./choose/catalog.webp"
+import technology from "./choose/technology.webp"
+import wealth from "./choose/wealth.webp"
 
 export {
   logo,
@@ -20,4 +27,11 @@ export {
   wallet,
   walletbtc,
   walletcard,
+  phone,
+  transaction,
+  rich,
+  portfolio,
+  technology,
+  catalog,
+  wealth
 }

@@ -21,9 +21,9 @@ const News = ({ leading }) => {
             className=" flex flex-col rounded-2xl border-2 bg-[#001951] p-6 transition delay-75 duration-200 ease-in-out hover:scale-105 hover:bg-indigo-500 xl:hover:scale-110"
             key={index}
           >
-            <div className="flex flex-row">
+            <div className="flex flex-row text-center">
               <a href={news.url} target="_blank" rel="noreferrer" className="">
-                <div className="flex flex-col space-y-4 text-center">
+                <div className="flex flex-col space-y-4">
                   <h2 className="text-lg text-white xl:text-xl">{news.name}</h2>
                   <img
                     className="h-[48px] w-[48px] self-center"
