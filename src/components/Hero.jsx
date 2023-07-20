@@ -48,7 +48,9 @@ const Hero = () => {
           Worldwide Cryptocurrency Stats
         </h1>
         <div className="grid grid-cols-2 gap-4 py-4 md:grid-cols-4">
-          <GlobalStats title="Total Coins" value={worldwideData.totalCoins} />
+          <GlobalStats 
+          title="Total Coins" 
+          value={worldwideData.totalCoins} />
           <GlobalStats
             title="Market Cap"
             value={millify(worldwideData.totalMarketCap)}
@@ -57,10 +59,6 @@ const Hero = () => {
             title="Markets"
             value={millify(worldwideData.totalMarkets)}
           />
-          {/* <GlobalStats
-            title="Exchanges"
-            value={millify(worldwideData.totalExchanges)}
-          /> */}
           <GlobalStats
             title="24h Volume"
             value={millify(worldwideData.total24hVolume)}
