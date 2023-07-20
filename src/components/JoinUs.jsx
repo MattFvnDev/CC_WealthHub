@@ -5,9 +5,10 @@ const JoinUs = () => (
   <section className="container mx-auto px-6 py-6 lg:py-8">
     <div className="relative mt-6 flex flex-row items-center justify-center lg:mt-32 2xl:mt-40">
       <img
+        loading="lazy"
         className=" Pulse absolute right-32 hidden h-[108px] w-[108px] lg:right-16 lg:flex xl:right-24 xl:h-[128px] xl:w-[128px] 2xl:right-52"
         src={wallet}
-        alt=""
+        alt="Wallet"
       />
       <h2 className="mb-8 text-center text-4xl font-semibold text-[#f3f2f4] lg:text-5xl 2xl:text-7xl">
         Join us via
@@ -17,9 +18,10 @@ const JoinUs = () => (
         </span>
       </h2>
       <img
+        loading="lazy"
         className="Pulse absolute left-32 hidden h-[108px] w-[108px] lg:left-16 lg:flex xl:left-24 xl:h-[128px] xl:w-[128px] 2xl:left-52"
         src={walletbtc}
-        alt=""
+        alt="Wallet with Bitcoin"
       />
     </div>
     <p className="mt-4 text-center text-xl lg:text-2xl 2xl:text-4xl">

@@ -20,6 +20,7 @@ const ChooseUs = () => (
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-1">
         <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6">
           <img
+            loading="lazy"
             className="h-[64px] w-[64px] rounded-full bg-white md:h-[128px] md:w-[128px]"
             src={phone}
             alt="phone"
@@ -36,6 +37,7 @@ const ChooseUs = () => (
         </div>
         <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6">
           <img
+            loading="lazy"
             className="h-[64px] w-[64px] rounded-full bg-white md:h-[128px] md:w-[128px]"
             src={catalog}
             alt="catalog"
@@ -51,6 +53,7 @@ const ChooseUs = () => (
         </div>
         <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6">
           <img
+            loading="lazy"
             className="h-[64px] w-[64px] rounded-full bg-white md:h-[128px] md:w-[128px]"
             src={transaction}
             alt="transaction"
@@ -68,6 +71,7 @@ const ChooseUs = () => (
       <div className="relative flex justify-center">
         <div className="right-30 absolute top-[30px] h-[300px] w-[300px] rounded-full bg-[#d242fd] opacity-60 blur-[120px] filter sm:h-[350px] sm:w-[350px] md:top-[130px] xl:top-[325px]" />
         <img
+          loading="lazy"
           className="lg:object-contain 2xl:object-none"
           src={chip}
           alt="Wallet with credit cards and money"
@@ -77,6 +81,7 @@ const ChooseUs = () => (
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-1">
           <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6">
             <img
+              loading="lazy"
               className="h-[64px] w-[64px] rounded-full bg-white md:h-[128px] md:w-[128px]"
               src={rich}
               alt="money"
@@ -90,6 +95,7 @@ const ChooseUs = () => (
           </div>
           <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6">
             <img
+              loading="lazy"
               className="h-[64px] w-[64px] rounded-full md:h-[128px] md:w-[128px]"
               src={technology}
               alt="technology"
@@ -105,6 +111,7 @@ const ChooseUs = () => (
           </div>
           <div className="flex flex-col gap-4 rounded-2xl border-2 bg-[#001951] p-6">
             <img
+              loading="lazy"
               className="h-[64px] w-[64px] rounded-full bg-white md:h-[128px] md:w-[128px]"
               src={portfolio}
               alt="portfolio"

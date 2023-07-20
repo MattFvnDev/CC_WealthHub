@@ -13,7 +13,7 @@ const News = ({ leading }) => {
 
   // console.log(coinNews)
 
-  if (!coinNews?.value) return <Loader/>
+  if (!coinNews?.value) return <Loader />
   return (
     <section className="container mx-auto px-6 py-6 lg:py-12">
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 xl:grid-cols-4 2xl:gap-14">
@@ -27,6 +27,7 @@ const News = ({ leading }) => {
                 <div className="flex flex-col space-y-4">
                   <h2 className="text-lg text-white xl:text-xl">{news.name}</h2>
                   <img
+                    loading="lazy"
                     className="h-[48px] w-[48px] self-center"
                     src={news?.image?.thumbnail?.contentUrl || substituteImage}
                     alt=""

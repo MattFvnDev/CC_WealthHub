@@ -12,6 +12,7 @@ const Logo = () => {
     <>
       <Link onClick={scrollToTop} className="flex items-center space-x-2">
         <img
+          loading="lazy"
           src={logo}
           alt="Logo"
           className="h-[42px] w-[42px] object-contain"

@@ -25,6 +25,7 @@ const CurrencyCard = ({ data }) => {
           >
             <div className="flex flex-row-reverse justify-between">
               <img
+                loading="lazy"
                 className="h-[50px] w-[50px] xl:h-[64px] xl:w-[64px]"
                 src={money}
                 alt="Cash"

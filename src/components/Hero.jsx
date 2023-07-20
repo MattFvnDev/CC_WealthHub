@@ -10,7 +10,7 @@ const Hero = () => {
   const { data, isFetching } = useGetCoinsQuery(4)
   const worldwideData = data?.data?.stats
   // console.log(worldwideData)
-  if (isFetching) return <Loader/>
+  if (isFetching) return <Loader />
 
   return (
     <section className="container mx-auto">
@@ -34,8 +34,13 @@ const Hero = () => {
           </div>
         </div>
         <div className="relative flex flex-col items-center">
-          <div className="animate-pulse right-25 absolute top-[25px] h-[300px] w-[300px] rounded-full bg-[#d242fd] opacity-70 blur-[120px] filter sm:top-[60px] sm:h-[350px] sm:w-[350px] lg:top-[100px]" />
-          <img className="object-cover" src={coinsbanknote} alt="" />
+          <div className="right-25 absolute top-[25px] h-[300px] w-[300px] animate-pulse rounded-full bg-[#d242fd] opacity-70 blur-[120px] filter sm:top-[60px] sm:h-[350px] sm:w-[350px] lg:top-[100px]" />
+          <img
+            loading="lazy"
+            className="object-cover"
+            src={coinsbanknote}
+            alt=""
+          />
         </div>
       </div>
       <div className="mt-4 px-6 md:mt-14 lg:mt-24 2xl:mt-40">
@@ -64,18 +69,20 @@ const Hero = () => {
       </div>
       <div className="relative mt-6 flex flex-row items-center justify-center px-6 lg:mt-32 2xl:mt-40">
         <img
+          loading="lazy"
           className=" absolute right-32 hidden h-[108px] w-[108px] animate-bounce lg:flex xl:right-24 2xl:right-0"
           src={ethereumcoin}
-          alt=""
+          alt="Ethereum Coin"
         />
         <h1 className="text-center text-3xl font-semibold text-[#f3f2f4] lg:text-5xl 2xl:text-6xl">
           Check and Trade <br className="hidden lg:flex xl:hidden" />
           your favorite coins
         </h1>
         <img
+          loading="lazy"
           className="absolute left-32 hidden h-[108px] w-[108px] animate-bounce lg:flex xl:left-24 2xl:left-0"
           src={coins}
-          alt=""
+          alt="Crypto Coins"
         />
       </div>
       <h2 className="mb-4 mt-14 px-6 text-center text-2xl font-semibold text-[#00ff00] sm:mt-12 lg:mt-16 lg:text-5xl xl:mt-32 2xl:mb-12 2xl:text-6xl">
