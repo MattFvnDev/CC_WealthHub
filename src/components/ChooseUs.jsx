@@ -66,7 +66,7 @@ const ChooseUs = () => (
         </div>
       </div>
       <div className="relative flex justify-center">
-        <div className="right-30 absolute top-[70px] h-[350px] w-[350px] rounded-full bg-[#d242fd] opacity-60 blur-[120px] filter md:top-[100px] xl:top-[300px]" />
+        <div className="right-30 absolute top-[30px] h-[300px] w-[300px] rounded-full bg-[#d242fd] opacity-60 blur-[120px] filter sm:h-[350px] sm:w-[350px] md:top-[130px] xl:top-[325px]" />
         <img
           className="lg:object-contain 2xl:object-none"
           src={chip}

@@ -5,8 +5,24 @@ import { NavLink } from "react-router-dom"
 
 const Header = () => {
   const [toggle, setToggle] = useState(false)
+  const [color, setColor] = useState(false)
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true)
+    } else {
+      setColor(false)
+    }
+  }
+  window.addEventListener("scroll", changeColor)
+
   return (
-    <header className="sticky top-0 z-10">
+    <header
+      className={
+        color
+          ? "bg-[#000000] sticky top-0 z-10 shadow-sm"
+          : "sticky top-0 z-10 bg-transparent shadow-none"
+      }
+    >
       <nav className="container mx-auto flex justify-between p-6">
         <Logo />
         <ul className="hidden items-center md:inline-flex">

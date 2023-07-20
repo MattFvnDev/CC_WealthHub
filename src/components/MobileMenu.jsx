@@ -16,7 +16,7 @@ const MobileMenu = ({ toggle, setToggle }) => (
     <div
       className={`${
         toggle ? `flex` : `hidden`
-      } mobileMenu absolute left-0 right-0 top-16 mx-6 my-4 max-w-3xl justify-center rounded-xl bg-black p-6`}
+      } mobileMenu absolute left-0 right-0 top-[65px] mx-6 my-4 max-w-3xl justify-center rounded-xl bg-black p-6`}
     >
       <ul className="flex flex-col items-center ">
         {navLinks.map((navLink, index) => {

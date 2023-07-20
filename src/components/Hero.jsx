@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <section className="container mx-auto">
       <div className="grid grid-cols-1 px-6 py-6 md:grid-cols-2 md:gap-8 lg:mt-32 lg:gap-16 xl:gap-24 2xl:gap-40">
-        <div className="flex max-w-[600px] flex-col justify-center text-center md:items-start md:text-start lg:pl-16 xl:pl-28 2xl:pl-36">
+        <div className="flex max-w-[590px] flex-col justify-center text-center md:items-start md:text-start lg:pl-16 xl:pl-28 2xl:pl-36">
           <h1 className="text-4xl font-semibold xl:mb-4 xl:text-6xl 2xl:mb-8">
             Let's build wealth together
           </h1>
@@ -34,8 +34,8 @@ const Hero = () => {
           </div>
         </div>
         <div className="relative flex flex-col items-center">
-          <div className="right-25 absolute top-[100px] h-[350px] w-[350px] rounded-full bg-[#d242fd] opacity-60 blur-[120px] filter" />
-          <img className="object-contain " src={coinsbanknote} alt="" />
+          <div className="right-25 absolute top-[25px] h-[300px] w-[300px] rounded-full bg-[#d242fd] opacity-70 blur-[120px] filter sm:top-[60px] sm:h-[350px] sm:w-[350px] lg:top-[100px]" />
+          <img className="object-cover " src={coinsbanknote} alt="" />
         </div>
       </div>
       <div className="mt-4 px-6 md:mt-14 lg:mt-24 2xl:mt-40">
