@@ -34,8 +34,8 @@ const Hero = () => {
           </div>
         </div>
         <div className="relative flex flex-col items-center">
-          <div className="right-25 absolute top-[25px] h-[300px] w-[300px] rounded-full bg-[#d242fd] opacity-70 blur-[120px] filter sm:top-[60px] sm:h-[350px] sm:w-[350px] lg:top-[100px]" />
-          <img className="object-cover " src={coinsbanknote} alt="" />
+          <div className="animate-pulse right-25 absolute top-[25px] h-[300px] w-[300px] rounded-full bg-[#d242fd] opacity-70 blur-[120px] filter sm:top-[60px] sm:h-[350px] sm:w-[350px] lg:top-[100px]" />
+          <img className="object-cover" src={coinsbanknote} alt="" />
         </div>
       </div>
       <div className="mt-4 px-6 md:mt-14 lg:mt-24 2xl:mt-40">
