@@ -19,7 +19,7 @@ const Hero = () => {
           <h1 className="text-4xl font-semibold xl:mb-4 xl:text-6xl 2xl:mb-8">
             Let's build wealth together
           </h1>
-          <p className="my-4 text-base font-normal text-[#00ff00] lg:text-lg xl:text-xl">
+          <p className="my-4 text-base font-normal text-[#00ff00] lg:text-lg xl:text-2xl">
             WealthHub is the most convenient platform to trade cryptocurrency
             and exchange currencies. Sign up now and build your cryptocurrency
             portfolio today.
