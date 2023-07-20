@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { Button, GlobalStats, NewsButton } from "./"
-import { coins, ethereumcoin, hero} from "../assets"
+import { coins, ethereumcoin, coinsbanknote } from "../assets"
 import { useGetCoinsQuery } from "../services/coinsApi"
 import millify from "millify"
 import { Cryptocurrencies, News } from "../pages"
@@ -33,8 +33,9 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col items-center">
-          <img className="object-contain lg:pl-6 xl:pl-16 2xl:pl-28" src={hero} alt="" />
+        <div className="relative flex flex-col items-center">
+          <div className="right-25 absolute top-[100px] h-[350px] w-[350px] rounded-full bg-[#d242fd] opacity-60 blur-[120px] filter" />
+          <img className="object-contain " src={coinsbanknote} alt="" />
         </div>
       </div>
       <div className="mt-4 px-6 md:mt-14 lg:mt-24 2xl:mt-40">

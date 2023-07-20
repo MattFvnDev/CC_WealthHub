@@ -7,13 +7,13 @@ import {
   rich,
   technology,
   transaction,
-  wealth,
+  chip,
 } from "../assets"
 
 const ChooseUs = () => (
   <section className="container mx-auto px-6 py-6 lg:py-8">
     <h2 className="mb-4 mt-14 px-6 text-center text-3xl font-semibold text-[#00ff00] sm:mt-12 md:mb-16 lg:mb-20 lg:mt-16 lg:text-5xl xl:mt-32 2xl:mb-12 2xl:text-7xl">
-      Why Customers <br/>
+      Why Customers <br />
       Choose Us
     </h2>
     <div className="grid grid-cols-1 gap-10 xl:grid-cols-3">
@@ -65,10 +65,11 @@ const ChooseUs = () => (
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="relative flex justify-center">
+        <div className="right-30 absolute top-[70px] h-[350px] w-[350px] rounded-full bg-[#d242fd] opacity-60 blur-[120px] filter md:top-[100px] xl:top-[300px]" />
         <img
-          className="lg:object-contain xl:object-none"
-          src={wealth}
+          className="lg:object-contain 2xl:object-none"
+          src={chip}
           alt="Wallet with credit cards and money"
         />
       </div>
