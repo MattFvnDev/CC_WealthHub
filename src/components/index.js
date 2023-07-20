@@ -10,7 +10,7 @@ import GlobalStats from "./GlobalStats"
 import Button from "./Button"
 import NewsButton from "./NewsButton"
 import CurrencyCard from "./CurrencyCard"
-
+import Loader from "./Loader"
 
 export {
   Header,
@@ -25,4 +25,5 @@ export {
   Button,
   NewsButton,
   CurrencyCard,
+  Loader
 }

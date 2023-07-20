@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import millify from "millify"
 import { Link } from "react-router-dom"
 import { useGetCoinsQuery } from "../services/coinsApi"
+import {Loader} from "../components"
 
 const Cryptocurrencies = ({ leading }) => {
   const count = leading ? 4 : 100
@@ -17,7 +18,7 @@ const Cryptocurrencies = ({ leading }) => {
     setCoins(filteredCoins)
   }, [coinsList, search])
 
-  if (isFetching) return "Loading..."
+  if (isFetching) return <Loader/>
 
   return (
     <section className="container mx-auto px-6 py-6 lg:py-8">

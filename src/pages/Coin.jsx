@@ -9,13 +9,14 @@ import { IoPodium } from "react-icons/io5"
 import { TiTick } from "react-icons/ti"
 import { CgClose } from "react-icons/cg"
 import { useParams } from "react-router-dom"
+import {Loader} from "../components"
 
 const Coin = () => {
   const { coinId } = useParams()
   const { data, isFetching } = useGetCoinDetailsQuery(coinId)
   const coinDetails = data?.data?.coin
   // console.log(data)
-  if (isFetching) return "Loading..."
+  if (isFetching) return <Loader/>
 
   const detailStats = [
     {

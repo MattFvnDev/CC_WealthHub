@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { Button, GlobalStats, NewsButton } from "./"
+import { Button, GlobalStats, NewsButton, Loader } from "./"
 import { coins, ethereumcoin, coinsbanknote } from "../assets"
 import { useGetCoinsQuery } from "../services/coinsApi"
 import millify from "millify"
@@ -10,7 +10,7 @@ const Hero = () => {
   const { data, isFetching } = useGetCoinsQuery(4)
   const worldwideData = data?.data?.stats
   // console.log(worldwideData)
-  if (isFetching) return "Loading..."
+  if (isFetching) return <Loader/>
 
   return (
     <section className="container mx-auto">

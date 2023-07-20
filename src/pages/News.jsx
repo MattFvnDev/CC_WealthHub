@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useGetCoinsNewsQuery } from "../services/newsApi"
+import { Loader } from "../components"
 
 const News = ({ leading }) => {
   const [searchCategory, setSearchCategory] = useState("Cryptocurrency")
@@ -12,7 +13,7 @@ const News = ({ leading }) => {
 
   // console.log(coinNews)
 
-  if (!coinNews?.value) return "Loading..."
+  if (!coinNews?.value) return <Loader/>
   return (
     <section className="container mx-auto px-6 py-6 lg:py-12">
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 xl:grid-cols-4 2xl:gap-14">
