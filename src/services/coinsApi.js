@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
-const rapidApiKey = import.meta.env.VITE_RAPID_API_CRYPTO_KEY
-const rapidApiHost = import.meta.env.VITE_RAPID_API_CRYPTO_HOST
-const rapidApiUrl = import.meta.env.VITE_RAPID_API_CRYPTO_URL
+const rapidApiKey = import.meta.env.VITE_RAPID_API_KEY 
+const rapidApiHost = "coinranking1.p.rapidapi.com"
+const rapidApiUrl = "https://coinranking1.p.rapidapi.com"
 
 const apiHeaders = {
   "X-RapidAPI-Key": rapidApiKey,
