@@ -19,6 +19,7 @@ const Cryptocurrencies = ({ leading }) => {
   }, [coinsList, search])
 
   if (isFetching) return <Loader />
+  // console.log(coins)
 
   return (
     <section className="container mx-auto px-6 py-6 lg:py-8">

@@ -3,8 +3,7 @@ import { money } from "../assets"
 
 const CurrencyCard = ({ data }) => {
   const [currencies, setCurrency] = useState(data?.rates)
-  // const currencies = data.rates
-  // console.log(currency)
+  // console.log(currencies)
 
   return (
     <>
