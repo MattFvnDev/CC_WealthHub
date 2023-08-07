@@ -25,12 +25,12 @@ const Hero = () => {
             portfolio today.
           </p>
           <div className="my-4 justify-center md:my-8">
-            <button
-              type="button"
-              className="rounded-xl bg-[#d242fd] px-10 py-3 text-lg font-semibold hover:bg-[#870dac] lg:px-12 lg:py-4 2xl:mt-10"
+            <Link
+              className="rounded-xl bg-[#d242fd] px-10 py-4 text-lg font-semibold hover:bg-[#870dac] lg:px-12 lg:py-5 2xl:mt-10"
+              to="currencies"
             >
-              <Link to="currencies">Get Started</Link>
-            </button>
+              Get Started
+            </Link>
           </div>
         </div>
         <div className="relative flex flex-col items-center">
@@ -48,9 +48,7 @@ const Hero = () => {
           Worldwide Cryptocurrency Stats
         </h1>
         <div className="grid grid-cols-2 gap-4 py-4 md:grid-cols-4">
-          <GlobalStats 
-          title="Total Coins" 
-          value={worldwideData.totalCoins} />
+          <GlobalStats title="Total Coins" value={worldwideData.totalCoins} />
           <GlobalStats
             title="Market Cap"
             value={millify(worldwideData.totalMarketCap)}
